@@ -1,13 +1,169 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+
+:root{
+    --primary: rgb(98, 0, 218);
+    --secondary: rgba(64, 0, 142, 0.491);
+    --ternary: rgb(64, 0, 142);
+    --bgcolor: rgba(26, 32, 34, 0.187);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: var(--bgcolor);
+}
+
+.container{
+    text-align: center;
+}
+
+.heading{
+    font-size: 2em;
+    font-weight: bold;
+} 
+
+.line{
+    background-color: var(--secondary);
+    height: 5px;
+    margin-top: 5px;
+    width: 20%;
+    margin: auto;
+}
+
+/* card  */
+.card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.img-div{
+    position: absolute;
+    top: -5rem;
+    z-index: 33;
+    margin: auto;
+}
+
+.image{
+    aspect-ratio: 1/1;
+    border: 50%;
+    width: 140px;
+    height: 140px;
+    z-index: 33;
+    border-radius: 50%;
+}
+
+.circle{
+    position: absolute;
+    background-color: var(--primary);
+    border: 50%;
+    width: 140px;
+    height: 140px;
+    z-index: -22;
+    left: 6px;
+    top: -4px;
+    border-radius: 50%;
+}
+
+.name-div{
+    text-align: center;
+    margin-top: 7px;
+}
+
+.name{
+    font-weight: 900;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.job-div{
+    text-align: center;
+    /* margin-top: 7px; */
+}
+
+.job{
+    color: var(--ternary);
+    text-transform: uppercase;
+    font-size: small;
+}
+
+.upper-quote{
+    color: var(--secondary);
+    margin: auto;
+    margin-top: 10px;
+}
+
+.lower-quote{
+    color: var(--secondary);
+    margin: auto;
+    margin-top: 10px;
+}
+
+.review{
+    text-align: center;
+    margin-top: 4px;
+    color: black
+}
+
+.new-div{
+    margin-top: 10px;
+}
+
+.btn{
+    border: 0;
+    font-size: 2em;
+    background-color: white;
+    cursor: pointer;
+    color: var(--secondary);
+}
+
+.btn:hover{
+    color: var(--primary);
+    transition: all 0.2s;
+}
+
+.btn-two{
+    background-color: var(--secondary);
+    transition: all 0.2s;
+    cursor: pointer;
+    padding: 5px 2em;
+    border: 0;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    font-size: 1.1em;
+}
+
+.btn-two:hover{
+    background-color: var(--primary);    
+}
+
+.testimonial{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    background-color: white;
+    padding: 2em;
+    margin-top: 2em;
+}
+
+.testimonial:hover{
+    box-shadow: var(--ternary) 1px 1px 1px;
+    border-radius: 10px;
+    transition: all 0.7s;
 }
